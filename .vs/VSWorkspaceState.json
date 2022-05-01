@@ -3,8 +3,9 @@
     "",
     "\\Group-01-Computer-Store-main",
     "\\Group-01-Computer-Store-main\\Group1CompStore",
+    "\\Group-01-Computer-Store-main\\Group1CompStoreTests",
     "\\Group-01-Computer-Store-main\\Group1CompStore\\Controllers"
   ],
-  "SelectedNode": "\\Group-01-Computer-Store-main\\Group1CompStore.sln",
+  "SelectedNode": "\\Group-01-Computer-Store-main\\Group1CompStoreTests\\JwtAuthenticationManagerTests.cs",
   "PreviewInSolutionExplorer": false
 }

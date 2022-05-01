@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "cYeES5C9rCqHPZY3L+OAL6WbbDmqvHSaZXXGPqUyDCCapvljq+C8TqfJ+14Czpy9/RQPoMHrzFCaapjkfXq9mQ==",
+  "dgSpecHash": "ejOj0dOMCAO/rMfqAOXMVL4AJOVLBHeVj/HYWEh+Az3XDTlcJ9ihC5OsHuMCflVGDu6s5F0xzNUQr13bFDK+AA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bilal\\OneDrive\\Desktop\\Week_12_Individual_Assignment-master\\Group-01-Computer-Store-main\\Group1CompStore\\Group1CompStore.csproj",
+  "projectFilePath": "C:\\Users\\bilal\\OneDrive\\Desktop\\Week_14\\Group-01-Computer-Store-main\\Group1CompStore\\Group1CompStore.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bilal\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\bilal\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
