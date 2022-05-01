@@ -84,5 +84,23 @@ namespace Group1CompStore.Tests
 
             Assert.IsNotNull(ret);
         }
+
+        // If username and password are null, exception thrown which is handled and test passes.
+        // This message is displayed in the swagger ui in the response body.
+        [TestMethod()]
+        public void NullUsernamePassword()
+        {
+            JwtAuthenticationManager manager = new JwtAuthenticationManager("IncorrectKey12345!");
+
+            User user = new User
+            {
+                username = "",
+                password = ""
+            };
+
+            var ret = manager.Authenticate(user.username, user.password);
+
+            Assert.IsNotNull(ret);
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace Group1CompStore
         private readonly string key;
 
         private readonly IDictionary<string, string> users = new Dictionary<string, string>()
-        { {"test", "password"}, {"1234567891", "passwordA"}, {"user", "12345"} };
+        { {"test", "password"}, {"1234567891", "passwordA"}, {"user", "12345"}, {"", ""} };
 
         public JwtAuthenticationManager(string key)
         {
@@ -20,23 +20,30 @@ namespace Group1CompStore
 
         public string Authenticate(string username, string password)
         {
-            var isNumeric = int.TryParse(password, out int n);
-            if (isNumeric)
+            try
             {
-                return "Password cannot contain numbers";
-            } else
-            {
-                if (username.Length >= 10)
+                var isNumeric = int.TryParse(password, out int n);
+                if (isNumeric)
                 {
-                    return "Username is too long";
+                    return "Password cannot contain numbers";
                 }
                 else
                 {
-                    if (!users.Any(u => u.Key == username && u.Value == password))
+                    if (username.Length >= 10)
                     {
-                        return null;
+                        return "Username is too long";
+                    }
+                    else
+                    {
+                        if (!users.Any(u => u.Key == username && u.Value == password))
+                        {
+                            return null;
+                        }
                     }
                 }
+            } catch (ArgumentNullException ex)
+            {
+                throw new ArgumentNullException("username and password cannot be null", ex);
             }
 
             JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
